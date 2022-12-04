@@ -10,7 +10,7 @@ static const uint32_t _division_table[121]={0,0,0x80000000,0x55555556,0x40000000
 
 
 
-static uint8_t _calculate_sequence_length(uint32_t x){
+static inline uint8_t _calculate_sequence_length(uint32_t x){
 	uint8_t out=0;
 	while (1){
 		uint32_t y=(x&0x0f0f0f0f)+((x>>4)&0x0f0f0f0f);
